@@ -21,7 +21,7 @@ async function showTopScorers() {
 
     // create table
     const table = document.createElement("table");
-    table.className = "min-w-full border border-gray-300 rounded-lg overflow-hidden shadow-sm";
+    table.className = "min-w-full rounded-lg overflow-hidden shadow-sm";
     table.innerHTML = `
     <thead class="bg-purple-900 text-white">
         <tr>
