@@ -54,7 +54,7 @@ async function showTeams() {
         row.innerHTML = `
             <td class="px-4 py-4 text-center font-bold">${team.rank}</td>
             <td class="px-4 py-4 flex items-center gap-2 font-bold">
-                <img src="${team.team.logo} alt="${team.team.name}"/>
+                <img src="${team.team.logo}" alt="${team.team.name}" class="w-6"/>
                 ${team.team.name}
             </td>
             <td class="px-4 py-4 text-center text-sm">${team.all.played}</td>

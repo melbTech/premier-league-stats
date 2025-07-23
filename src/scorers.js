@@ -31,7 +31,7 @@ async function showTopScorers() {
             <th class="px-4 py-3 text-center">Goals</th>
         </tr>
     </thead>
-    <tbody class="bg-white text-gray-800"></tbody>
+    <tbody class="bg-white text-[#37003c]"></tbody>
     `;
     content.appendChild(table);
 
@@ -41,16 +41,16 @@ async function showTopScorers() {
     scorers.slice(0, 10).forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td class="px-4 py-4 text-center">${index + 1}</td>
+            <td class="px-4 py-4 text-center font-bold">${index + 1}</td>
             <td class="px-4 py-4">
-                <p class="font-bold mb-2 text-lg">${item.player.name}</p>
+                <p class="font-bold mb-2">${item.player.name}</p>
                     <div class="flex items-center gap-2">
                         <img src="${item.statistics[0].team.logo}" alt="Team Logo" class="w-6 "/>
-                         <p class="text-sm text-gray-500">${item.statistics[0].team.name}</p>
+                         <p class="text-sm ">${item.statistics[0].team.name}</p>
                     </div>
             </td>
             <td class="px-4 py-4 text-center">${item.statistics[0].games.appearences}</td>
-            <td class="px-4 py-4 text-center font-bold text-lg">${item.statistics[0].goals.total}</td>
+            <td class="px-4 py-4 text-center font-bold">${item.statistics[0].goals.total}</td>
         `;
         tbody.appendChild(row);
     })
