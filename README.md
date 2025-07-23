@@ -30,6 +30,10 @@ npm install
 
 3. **Set up environment variables for API key**
 
+```
+VITE_API_KEY=your_rapidapi_key_here
+```
+
 4. **Run dev server**
 
 ```
