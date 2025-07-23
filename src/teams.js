@@ -46,6 +46,7 @@ async function showTeams() {
      content.appendChild(table);
 
      const tbody = document.querySelector("tbody");
+    //  get api endpoint
      const standings = await fetchData("/standings?league=39&season=2023");
      const teams = standings[0].league.standings[0];
 

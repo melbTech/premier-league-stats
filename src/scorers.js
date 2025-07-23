@@ -3,6 +3,7 @@ import "./style.css"
 const apiKey = import.meta.env.VITE_API_KEY;
 const baseUrl = "https://v3.football.api-sports.io";
 
+// 
 async function fetchData(endpoint) {
     const response = await fetch(`${baseUrl}${endpoint}`, {
         method: "GET",
@@ -36,6 +37,7 @@ async function showTopScorers() {
     content.appendChild(table);
 
     const tbody = document.querySelector("tbody");
+    // get api endpoint
     const scorers = await fetchData("/players/topscorers?season=2023&league=39");
 
     scorers.slice(0, 10).forEach((item, index) => {
